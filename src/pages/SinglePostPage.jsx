@@ -33,7 +33,7 @@ function SinglePostPage() {
         <p>This is SinglePostPage</p>
         <button onClick={() => navigate(-1)}>Go Back</button>
       </Card>
-      <CommentsBlock />
+      <CommentsBlock postId={postUid} />
     </div>
   );
 }

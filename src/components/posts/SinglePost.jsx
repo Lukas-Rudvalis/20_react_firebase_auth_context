@@ -22,7 +22,6 @@ function SinglePost({ item }) {
           <p className="date">{item.date}</p>
           <Link to={`/posts/${item.uid}`}>Read more...</Link>
         </Grid>
-        {/* <p className="date">{item.date}</p> */}
       </Card>
     </li>
   );
