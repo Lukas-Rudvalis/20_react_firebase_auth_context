@@ -1,6 +1,6 @@
-import './card.css';
+import './card.scss';
 
 function Card({ children }) {
-  return <div className='card'>{children}</div>;
+  return <div className="uiCard">{children}</div>;
 }
 export default Card;

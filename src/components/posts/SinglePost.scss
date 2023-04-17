@@ -1,0 +1,17 @@
+.singlePost {
+  .author {
+    font-style: italic;
+    color: #5b5b5b;
+  }
+
+  .tags {
+    display: flex;
+    gap: 10px;
+  }
+
+  .tags > * {
+    padding: 0px 5px;
+    background-color: #777;
+    border-radius: 20px;
+  }
+}

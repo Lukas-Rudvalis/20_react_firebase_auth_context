@@ -2,8 +2,10 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import LoginForm from '../components/auth/LoginForm';
 import { auth } from '../firebase/firebase';
 import { useAuthCtx } from '../store/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 
 function LoginPage() {
+  const navigate = useNavigate();
   const { login, ui, setIsLoading } = useAuthCtx();
   function loginFire({ email, password }) {
     // start loading
@@ -19,6 +21,7 @@ function LoginPage() {
         console.log('user ===', user);
         // login(user);
         setIsLoading(false);
+        navigate('/profile');
       })
       .catch((error) => {
         const errorCode = error.code;

@@ -1,14 +1,14 @@
-import './grid.css';
+import './grid.scss';
 // apjuosiantis elementas suteikiantis papildomu stiliaus ar funkciju dalyku
-function Grid(props) {
+function Grid({ cols, children, ul, className = '' }) {
   const inlineStyleObj = {
-    // color: 'tomato',
-    gridTemplateColumns: `repeat(${props.cols}, 1fr)`,
+    gridTemplateColumns: `repeat(${cols}, 1fr)`,
   };
+  const Element = ul ? 'ul' : 'div';
   return (
-    <div style={inlineStyleObj} className={'myGrid'}>
-      {props.children}
-    </div>
+    <Element style={inlineStyleObj} className={`myGrid ${className}`}>
+      {children}
+    </Element>
   );
 }
 export default Grid;

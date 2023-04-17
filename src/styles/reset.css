@@ -89,3 +89,7 @@ button {
   border: 1px solid #777;
   cursor: pointer;
 }
+
+.unlisted {
+  list-style-type: none;
+}

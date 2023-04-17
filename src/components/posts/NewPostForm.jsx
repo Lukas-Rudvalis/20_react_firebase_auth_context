@@ -9,12 +9,12 @@ const NewPostForm = ({ onNewPost }) => {
   const { user } = useAuthCtx();
   const formik = useFormik({
     initialValues: {
-      title: '',
-      body: '',
-      author: '',
-      tags: '',
+      title: 'Post 1',
+      body: 'The body of Post',
+      author: user?.email || '',
+      tags: 'one, two, three',
       date: '',
-      userUid: user?.uid,
+      userUid: user?.uid || '',
     },
     validate: (values) => {
       const errors = {};
@@ -38,6 +38,9 @@ const NewPostForm = ({ onNewPost }) => {
       onNewPost(values);
     },
   });
+
+  formik.values.author = user?.email || '';
+  formik.values.userUid = user?.uid || '';
 
   return (
     <div className="new-post-form">

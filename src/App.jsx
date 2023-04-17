@@ -8,6 +8,7 @@ import Header from './components/layout/Header';
 import Feedback from './components/ui/feedback/Feedback';
 import PostsPage from './pages/PostsPage';
 import AddPostsPage from './pages/AddPostpage';
+import SinglePostPage from './pages/SinglePostPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/posts" element={<PostsPage />} />
         <Route path="/posts/new" element={<AddPostsPage />} />
+        <Route path="/posts/:postUid" element={<SinglePostPage />} />
       </Routes>
     </div>
   );

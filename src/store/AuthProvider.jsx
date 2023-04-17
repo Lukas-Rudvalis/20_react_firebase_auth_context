@@ -40,7 +40,7 @@ function AuthProvider({ children }) {
         setUser(user);
         setFeedback({
           show: true,
-          msg: msg || 'Success',
+          msg: 'User logged in',
           type: 'success',
         });
       } else {
